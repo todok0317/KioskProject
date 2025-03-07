@@ -17,7 +17,7 @@ public class MenuItem {
     // 기능
 
     // 게터를 이용하여 이름, 가격, 설명 반환
-    public String getBurgerName() {
+    public String getName() {
         return name;
     }
 
