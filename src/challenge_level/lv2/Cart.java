@@ -37,27 +37,19 @@ public class Cart {
         if (cartItems.isEmpty()) {
             System.out.println("장바구니에 아이템이 없습니다.");
         } else {
-            double totalPrice = 0;
+            double totalPrice = cartItems.stream().mapToDouble(MenuItem::getPrice).sum();
+            cartItems.forEach(item -> System.out.println("| " + item.getName() + "     | W " + item.getPrice() + " | " + item.getDescription()));
 
-            for (MenuItem item : cartItems) {
-                System.out.println("| " + item.getName() + "     | W " + item.getPrice() + " | " + item.getDescription());
-                totalPrice += item.getPrice();
-
-            }
-                System.out.println("");
-                System.out.println("-----------------------------------------------------------------------");
-                System.out.println("[                                TOTAL                                 ]");
-                System.out.println("| W " + totalPrice);
-                System.out.println("");
+            System.out.println("");
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println("[                                TOTAL                                 ]");
+            System.out.println("| W " + totalPrice);
+            System.out.println("");
         }
     }
 
     public double calculateTotalPrice() {
-        double totalPrice = 0;
-        for (MenuItem item : cartItems) {
-            totalPrice += item.getPrice();
-        }
-        return totalPrice; // 총 가격 반환
+        return cartItems.stream().mapToDouble(MenuItem::getPrice).sum();
     }
 
     //

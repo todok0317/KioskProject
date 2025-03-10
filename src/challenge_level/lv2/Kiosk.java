@@ -199,22 +199,9 @@ public class Kiosk {
                         discountAnswer = inputManager.getUserChoice();
                         System.out.println("");
                         
-                        switch (discountAnswer){
-                            case 1 :
-                                discountTotalPrice = totalPrice * 0.9;
-                                break;
-                            case 2 :
-                                discountTotalPrice = totalPrice * 0.95;
-                                break;
-                            case 3 :
-                                discountTotalPrice = totalPrice * 0.97;
-                                break;
-                            case 4 :
-                                discountTotalPrice = totalPrice;
-                                break;
-                            default:
-                                System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
-                        }
+                        DiscountType discountType = DiscountType.fromInput(discountAnswer);
+                        discountTotalPrice = discountType.applyDiscount(totalPrice);
+
                         System.out.println("주문이 완료되었습니다. 금액은 W " + discountTotalPrice + "입니다.");
                         System.out.println("");
 

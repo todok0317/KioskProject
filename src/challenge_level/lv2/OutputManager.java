@@ -71,10 +71,10 @@ public class OutputManager {
     }
 
     public void discountMenu () {
-        System.out.println("| 1. 국가유공자         | 10% 할인                                       |");
-        System.out.println("| 2. 군인             |  5% 할인                                       |");
-        System.out.println("| 3. 학생             |  3% 할인                                       |");
-        System.out.println("| 4. 일반             |  할인이 없습니다.                                 |");
+        System.out.println("| 1. 국가유공자         | 10% 할인                                         |");
+        System.out.println("| 2. 군인             |  5% 할인                                         |");
+        System.out.println("| 3. 학생             |  3% 할인                                         |");
+        System.out.println("| 4. 일반             |  할인이 없습니다.                                   |");
     }
 
 }
