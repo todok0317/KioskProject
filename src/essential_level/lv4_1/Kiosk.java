@@ -1,6 +1,5 @@
 package essential_level.lv4_1;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Kiosk {
@@ -46,8 +45,8 @@ public class Kiosk {
                     if (answer1 == 1) {
                         System.out.println("[                          BURGERS MENU                               ]");
                         System.out.println("-----------------------------------------------------------------------");
-                        for (int i = 0; i < menu.getHambergerList().size(); i++) {
-                            MenuItem item = menu.getHambergerList().get(i);
+                        for (int i = 0; i < menu.getHamburgerList().size(); i++) {
+                            MenuItem item = menu.getHamburgerList().get(i);
                             System.out.println("| " + (i + 1) + ". " + item.getBurgerName() +
                                     "    |  W " + item.getPrice() + "  |  " + item.getDescription() + " |");
                             System.out.println("-----------------------------------------------------------------------");
@@ -59,8 +58,8 @@ public class Kiosk {
                             answer2 = sc.nextInt();
                             if (answer2 == 0) {
                                 break;
-                            } else if (answer2 >= 1 && answer2 <= menu.getHambergerList().size()) {
-                                MenuItem selectedItem = menu.getHambergerList().get(answer2 - 1);
+                            } else if (answer2 >= 1 && answer2 <= menu.getHamburgerList().size()) {
+                                MenuItem selectedItem = menu.getHamburgerList().get(answer2 - 1);
                                 System.out.println("\n선택한 메뉴: " + selectedItem.getBurgerName());
                                 System.out.println("가격: W" + selectedItem.getPrice());
                                 System.out.println("설명: " + selectedItem.getDescription() + "\n");

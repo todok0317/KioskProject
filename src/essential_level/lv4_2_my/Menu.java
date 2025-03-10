@@ -1,4 +1,4 @@
-package essential_level.lv4_lv5;
+package essential_level.lv4_2_my;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +8,7 @@ import java.util.Map;
 public class Menu {
 
     // 속성
+    // name은 왜 선언? 물어보기
     private String name;
     private  Map<String, List<MenuItem>> menuList;
 
@@ -18,12 +19,12 @@ public class Menu {
         menuList = new HashMap<>();
         this.menuList = menuList;
 
-        List<MenuItem> hamburgerList = new ArrayList<>();
-        hamburgerList.add( new MenuItem("ShackBurger ", 6.9, "토마토, 양상추, 쉑소스가 토핑 된 치즈버거    "));
-        hamburgerList.add( new MenuItem("SmokeShack  ", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑 된 치즈버거 "));
-        hamburgerList.add( new MenuItem("Cheeseburger", 6.9, "포테이토 번과 비프패티, 치즈가 토핑 된 치즈버거"));
-        hamburgerList.add( new MenuItem("Hamburger   ", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거    "));
-        menuList.put("Burger",hamburgerList);
+        List<MenuItem> hambergerList = new ArrayList<>();
+        hambergerList.add( new MenuItem("ShackBurger ", 6.9, "토마토, 양상추, 쉑소스가 토핑 된 치즈버거    "));
+        hambergerList.add( new MenuItem("SmokeShack  ", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑 된 치즈버거 "));
+        hambergerList.add( new MenuItem("Cheeseburger", 6.9, "포테이토 번과 비프패티, 치즈가 토핑 된 치즈버거"));
+        hambergerList.add( new MenuItem("Hamburger   ", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거    "));
+        menuList.put("Burger",hambergerList);
 
         List<MenuItem> drinkList = new ArrayList<>();
         drinkList.add( new MenuItem("Sprit       ", 0.3, "청량감이 넘치는 시원한 사이다            "));

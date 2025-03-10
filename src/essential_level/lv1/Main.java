@@ -38,7 +38,7 @@ public class Main {
                 case 0 :
                     break;
                 default :
-                    System.out.println("번호를 잘못 입력하3셨습니다. 다시 입력해주세요. \n");
+                    System.out.println("번호를 잘못 입력하셨습니다. 다시 입력해주세요. \n");
 
             }
 
