@@ -35,7 +35,7 @@ public class OutputManager {
         for (int i = 0; i < items.size(); i++) {
             MenuItem item = items.get(i);
             System.out.println("| " + (i + 1) + ". " + item.getName() +
-                    "    |  W " + item.getPrice() + "  |  " + item.getDescription() + " |");
+                    "    |  W " + item.getPrice() + "  |  " + item.getDescription() + "  |");
             System.out.println("-----------------------------------------------------------------------");
         }
     }

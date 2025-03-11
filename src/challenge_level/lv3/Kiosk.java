@@ -28,14 +28,14 @@ public class Kiosk {
         burger.add(new MenuItem("SmokeShack  ", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑 된 치즈버거 "));
         burger.add(new MenuItem("CheeseBurger", 6.9, "포테이토 번과 비프패티, 치즈가 토핑 된 치즈버거"));
         burger.add(new MenuItem("Hamburger   ", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거    "));
-        menus.add(new Menu("Burger", burger));
+        menus.add(new Menu("Burger ", burger));
 
         List<MenuItem> drink = new ArrayList<>();
         drink.add(new MenuItem("Sprite      ", 0.3, "청량감이 넘치는 시원한 사이다            "));
         drink.add(new MenuItem("Cola        ", 0.3, "청량감이 넘치는 시원한 코카콜라           "));
         drink.add(new MenuItem("Orange Juice", 0.5, "오렌지 과즙이 넘치는 시원한 오렌지 주스    "));
         drink.add(new MenuItem("Tomato Juice", 0.5, "토마토 과즙이 넘치는 달달한 토마토 주스    "));
-        menus.add(new Menu("Drink", drink));
+        menus.add(new Menu("Drink  ", drink));
 
         List<MenuItem> dessert = new ArrayList<>();
         dessert.add(new MenuItem("Ice-cream   ", 0.1, "우유 아이스크림                      "));
