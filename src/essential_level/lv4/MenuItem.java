@@ -1,4 +1,4 @@
-package essential_level.lv4_lv5;
+package essential_level.lv4;
 
 public class MenuItem {
 

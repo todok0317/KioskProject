@@ -1,4 +1,4 @@
-package challenge_level.lv1;
+package essential_level.lv4;
 
 import java.util.List;
 
@@ -46,15 +46,5 @@ public class OutputManager {
         System.out.println("가격: W" + selectedItem.getPrice());
         System.out.println("설명: " + selectedItem.getDescription() + "\n");
     }
-
-    public void orderMenu() {
-        System.out.println("[                            ORDER MENU                                ]");
-        System.out.println("-----------------------------------------------------------------------");
-        System.out.println("| 4. Orders        | 장바구니를 확인 후 주문합니다.                           |");
-        System.out.println("-----------------------------------------------------------------------");
-        System.out.println("| 5. Cancel        | 진행 중인 주문을 취소합니다.                            |");
-        System.out.println("-----------------------------------------------------------------------");
-    }
-
 
 }

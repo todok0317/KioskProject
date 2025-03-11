@@ -17,11 +17,11 @@ public class Cart {
     // 기능
 
     // 장바구니에 메뉴아이템 담기
-    public void addCart (MenuItem item) {
+    public void addCart(MenuItem item) {
         cartItems.add(item);
     }
 
-    // 장바구니 목록 조회
+    // 게터
     public List<MenuItem> getCartItems() {
         return cartItems;
     }
@@ -33,7 +33,8 @@ public class Cart {
 
     public void printCartItems() {
         System.out.println("[                            ORDER LIST                                ]");
-        // 장바구니가 비어있는지 확인
+
+        // 장바구니 비어있는지 확인
         if (cartItems.isEmpty()) {
             System.out.println("장바구니에 아이템이 없습니다.");
         } else {
@@ -44,21 +45,23 @@ public class Cart {
                 totalPrice += item.getPrice();
 
             }
-                System.out.println("");
-                System.out.println("-----------------------------------------------------------------------");
-                System.out.println("[                                TOTAL                                 ]");
-                System.out.println("| W " + totalPrice);
-                System.out.println("");
+            System.out.println("");
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println("[                                TOTAL                                 ]");
+            System.out.println("| W " + totalPrice);
+            System.out.println("");
         }
     }
 
     public double calculateTotalPrice() {
         double totalPrice = 0;
-        for (MenuItem item : cartItems) {
+        for(MenuItem item : cartItems) {
             totalPrice += item.getPrice();
         }
-        return totalPrice; // 총 가격 반환
+        return totalPrice;
     }
 
-    //
+
+
+
 }
