@@ -170,5 +170,4 @@ public class Kiosk {
         sc.close();
     }
 
-
 }
