@@ -73,8 +73,8 @@ public class Kiosk {
             categoryChoice = inputManager.choiceAnswer();
             System.out.println("");
 
-            // categoryChoice == menus.size() + 1;
-
+            // 메뉴들이 늘어나도 동적으로 숫자가 변동되고 기능도 변동됩니다.
+            // categoryChoice == menus.size() + 1; -> 주문번호
             if (categoryChoice == 0) {
                 break;
             }
@@ -143,10 +143,10 @@ public class Kiosk {
                     // 할인유형 선택 번호 입력
                     int discountTypeChoice = inputManager.choiceAnswer();
                     // 할인받은 가격 출력
-                    double discoutTotalprice = inputManager.discountTypeCalculator(discountTypeChoice, totalPrice);
+                    double discoutTotalprice = outputManager.discountTypeCalculator(discountTypeChoice, totalPrice);
                     System.out.println("주문이 완료되었습니다. 금액은 W " + discoutTotalprice + " 입니다.");
                     // 프로그램 종료
-                    categoryChoice =0;
+                    categoryChoice = 0;
                     break;
                 } else if (cartOrderChoice == 2) {
                     continue; // 계속

@@ -137,7 +137,7 @@ public class Kiosk {
                     // 할인유형 선택 번호 입력
                     int discountTypeChoice = inputManager.choiceAnswer();
                     // 할인받은 가격 출력
-                    double discoutTotalprice = inputManager.discountTypeCalculator(discountTypeChoice, totalPrice);
+                    double discoutTotalprice = outputManager.discountTypeCalculator(discountTypeChoice, totalPrice);
                     System.out.println("주문이 완료되었습니다. 금액은 W " + discoutTotalprice + " 입니다.");
                     // 프로그램 종료
                     categoryChoice =0;

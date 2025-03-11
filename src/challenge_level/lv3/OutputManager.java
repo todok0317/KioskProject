@@ -70,5 +70,21 @@ public class OutputManager {
 
     }
 
+    public double discountTypeCalculator(int discountTypeChoice, double totalprice) {
+        switch (discountTypeChoice) {
+            case 1 :
+                return totalprice * 0.9;
+            case 2 :
+                return totalprice * 0.95;
+            case 3 :
+                return totalprice * 0.97;
+            case 4 :
+                return totalprice * 1.00;
+            default :
+                throw new IllegalArgumentException("해당 유형이 없습니다. 다시 선택해주세요.");
+        }
+
+    }
+
 
 }
