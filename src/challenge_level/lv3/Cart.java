@@ -2,6 +2,7 @@ package challenge_level.lv3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cart {
 
@@ -31,6 +32,14 @@ public class Cart {
         cartItems.clear();
     }
 
+    // 특정메뉴 삭제기능
+    public void removeCartItem (String itemName) {
+        cartItems = cartItems.stream()
+                .filter(item -> !item.getName().equalsIgnoreCase(itemName))
+                .collect(Collectors.toList());
+    }
+
+    // 장바구니 아이템 리스트 출력
     public void printCartItems() {
         System.out.println("[                            ORDER LIST                                ]");
 
@@ -38,13 +47,20 @@ public class Cart {
         if (cartItems.isEmpty()) {
             System.out.println("장바구니에 아이템이 없습니다.");
         } else {
-            double totalPrice = 0;
+            double totalPrice = cartItems.stream()
+                    .mapToDouble(MenuItem::getPrice)
+                    .sum();
 
-            for (MenuItem item : cartItems) {
-                System.out.println("| " + item.getName() + "     | W " + item.getPrice() + " | " + item.getDescription());
-                totalPrice += item.getPrice();
+//            for (MenuItem item : cartItems) {
+//                System.out.println("| " + item.getName() + "     | W " + item.getPrice() + " | " + item.getDescription());
+//                totalPrice += item.getPrice();
+//
+//            }
 
-            }
+            // for문을 스트림 람다식으로 구현
+            cartItems.forEach(item ->
+                    System.out.println("| " + item.getName() + "     | W " + item.getPrice() + " | " + item.getDescription()));
+
             System.out.println("");
             System.out.println("-----------------------------------------------------------------------");
             System.out.println("[                                TOTAL                                 ]");
