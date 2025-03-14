@@ -88,6 +88,7 @@ public class Kiosk {
                 System.out.println("[                            " + selectedMenu.getName().toUpperCase() + " MENU                             ]");
                 System.out.println("-----------------------------------------------------------------------");
 
+
                 // 선택한 메뉴의 리스트들 출력
                 outputManager.printMenuItems(selectedMenu);
 
